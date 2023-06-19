@@ -4,5 +4,11 @@
   },
   "dependencies": {
     "typescript": "4.8.4"
+  },
+  "devDependenciesComments": {
+    "@types/node": "NodeEnv only"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.1"
   }
 }

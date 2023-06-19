@@ -25,13 +25,16 @@
  * (defining the next task)
  */
 export class Agent {
-    greeting: string;
-
-    constructor(message: string) {
-        this.greeting = message;
+    constructor(
+        private aiName: string,
+        private userCommunicationChannel: CommunicationChannel,
+    ) {
     }
 
-    greet(): String {
-        return "Hello, " + this.greeting;
+    async greet(): Promise<String> {
+        let username: string = await this.userCommunicationChannel.readInput("What is your name? ")
+        let message = `Hello, ${username}! I'm ${this.aiName}`;
+        this.userCommunicationChannel.writeOutput(message)
+        return message;
     }
 }
