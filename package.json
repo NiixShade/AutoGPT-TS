@@ -1,0 +1,8 @@
+{
+  "dependenciesComments": {
+    "typescript": "Need 4.8.4 instead of ^5.1.3 for webstorm auto compile. See https://youtrack.jetbrains.com/issue/WEB-60020. Else have to rely on tsc"
+  },
+  "dependencies": {
+    "typescript": "4.8.4"
+  }
+}
